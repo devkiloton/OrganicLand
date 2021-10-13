@@ -1,26 +1,26 @@
 import React from 'react';
-import { StyleSheet, Image, Dimensions, Text, View} from 'react-native';
+import { StyleSheet, Image, Dimensions, Text, View } from 'react-native';
 import top from '../../assets/top.png'
 import logo from '../../assets/logo.png'
-
+import CustomText from '../Components/CustomText'
 const width = Dimensions.get('screen').width;
 
 export default function Cart()
 {
     return<>
     <Image source={top} style={styles.top}/>
-    <Text style={styles.title}>Cart detail</Text>
+    <CustomText style={styles.title}>Cart detail</CustomText>
 
     <View style={styles.cart}>
-        <Text style={styles.name}>Veggie basket</Text>
+        <CustomText style={styles.name}>Veggie basket</CustomText>
         <View style={styles.farm}>
         <Image source={logo} style={styles.farmImage}/>
-            <Text style={styles.farmName}>Jenny Jack Farm</Text>
+            <CustomText style={styles.farmName}>Jenny Jack Farm</CustomText>
         </View>
-        <Text style={styles.description}>A basket with carefully 
+        <CustomText style={styles.description}>A basket with carefully 
         selected products from the
-         farm to  your kitchen</Text>
-         <Text style={styles.price}>U$ 30.00</Text>
+         farm to  your kitchen</CustomText>
+         <CustomText style={styles.price}>U$ 30.00</CustomText>
     </View>
     </>
 }
@@ -48,12 +48,13 @@ const styles = StyleSheet.create({
         color:"#464646",
         fontSize: 26,
         lineHeight: 42,
-        fontWeight:"bold"
+        fontWeight: "bold"
     },
     farmName:{
         fontSize: 16,
         height: 32,
-        paddingHorizontal:12
+        paddingHorizontal:12,
+        fontFamily: "MontserratRegular",
     },
     farmImage:{
         width: 32,
