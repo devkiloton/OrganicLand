@@ -1,7 +1,9 @@
 import React from 'react';
-import { StatusBar, SafeAreaView, View, Button} from 'react-native';
-import { useFonts, Montserrat_400Regular, Montserrat_700Bold, Montserrat_400Regular_Italic } from '@expo-google-fonts/montserrat';
-import Cart from './src/views/Cart/index'
+import { StatusBar, SafeAreaView, View } from 'react-native';
+import { useFonts, Montserrat_700Bold, Montserrat_400Regular } from '@expo-google-fonts/montserrat';
+import Cart from './src/views/Cart/index';
+import mock from './src/mocks/cart';
+import AppLoading from 'expo-app-loading';
 
 export default function App() {
   const [loadedFont] = useFonts({
@@ -10,13 +12,13 @@ export default function App() {
   });
 
   if(!loadedFont){
-    return <View/>;
+    return <AppLoading/>;
   }
 
   return (
     <SafeAreaView>
       <StatusBar/>
-      <Cart/>
+      <Cart {...mock}/>
     </SafeAreaView>
   );
 }

@@ -4,12 +4,12 @@ import { StyleSheet, View } from 'react-native';
 import Top from './Components/Top'
 import Details from './Components/Details'
 
-export default function Cart()
+export default function Cart({top, details})
 {
     return<>
-    <Top/>
+    <Top {...top}/>
     <View style={styles.cart}>
-    <Details/>    
+        <Details {...details}/>    
     </View>
     </>
 }

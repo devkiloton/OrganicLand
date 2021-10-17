@@ -6,11 +6,11 @@ import CustomText from '../../../Components/CustomText'
 
 const width = Dimensions.get('screen').width;
 
-export default function Top()
+export default function Top({title})
 {
     return <>
     <Image source={top} style={styles.top}/>
-    <CustomText style={styles.title}>Cart detail</CustomText>
+    <CustomText style={styles.title}>{title}</CustomText>
     </>
 }
 
