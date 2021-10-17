@@ -9,7 +9,10 @@ const cart = {
         logo: logo,
         farmName: 'Jenny Jack Farm',
         description: 'A basket with carefully selected products from the farm to  your kitchen.',
-        price: 'U$ 30.00'
+        price: 'U$ 30.00',
+    },
+    button:{
+        button: 'Buy'
     }
 }
 

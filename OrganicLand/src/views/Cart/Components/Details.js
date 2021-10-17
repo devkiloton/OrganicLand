@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Image, View } from 'react-native';
+import { StyleSheet, Image, Text, View, TouchableOpacity } from 'react-native';
 import CustomText from '../../../Components/CustomText';
 
 export default function details({name, logo, farmName, description, price})
