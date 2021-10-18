@@ -1,14 +1,15 @@
 import React from 'react';
-import {View, TouchableOpacity, Text, StyleSheet} from 'react-native';
+import {View, TouchableOpacity, StyleSheet } from 'react-native';
+import CustomText from '../../../Components/CustomText';
 
 
 export default function Button({button}){
     return <>
         <View style={styles.buttonView}>
             <TouchableOpacity style={styles.button} activeOpacity={0.7}>
-                <Text style={styles.textButton}>
+                <CustomText style={styles.textButton}>
                     {button}
-                </Text>
+                </CustomText>
             </TouchableOpacity>
         </View>
     </>
